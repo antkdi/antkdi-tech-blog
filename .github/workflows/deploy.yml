@@ -24,7 +24,7 @@ jobs:
       - name: Checkout daily-blog-automation posts
         uses: actions/checkout@v4
         with:
-          repository: antkdi/daily-blog-automation
+          repository: antkdi/antkdi-blog-generate
           path: daily-blog-automation
           sparse-checkout: output/posts
           token: ${{ secrets.GITHUB_TOKEN }}
