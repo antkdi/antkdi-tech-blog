@@ -22,11 +22,11 @@ export const metadata: Metadata = {
   },
   description:
     "AI, 기술 트렌드, 경제 분석에 대한 깊이 있는 인사이트를 공유합니다.",
-  metadataBase: new URL("https://antkdi.github.io"),
+  metadataBase: new URL("https://tech.antkdi.com"),
   openGraph: {
     type: "website",
     locale: "ko_KR",
-    url: "https://antkdi.github.io",
+    url: "https://tech.antkdi.com",
     siteName: "Kevin's Tech Blog",
     title: "Kevin's Tech Blog",
     description:
