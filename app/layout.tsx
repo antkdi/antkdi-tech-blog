@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
+import Script from "next/script";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -57,10 +58,23 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased`}
       >
-        <script
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-PFWSGPYHV7"
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-PFWSGPYHV7');
+          `}
+        </Script>
+        <Script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1121081614521056"
           crossOrigin="anonymous"
+          strategy="afterInteractive"
         />
         <ThemeProvider>
           <div className="flex min-h-screen flex-col">
